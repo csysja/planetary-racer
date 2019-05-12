@@ -13,7 +13,7 @@ function setup() {
 
 function setupShips() {
 	let x = getShipStartXPosition();
-	ship = new Ship(x, midpoint);
+	ship = new Ship(x, midpoint, midpoint, innerCircleRadius, outerCircleRadius);
 }
 
 function getShipStartXPosition() {
@@ -28,6 +28,9 @@ function draw() {
 	background(0);
 	checkKeyPresses();
 	ship.animate();
+	if (ship.isCollide()) {
+		console.log('collide');
+	}
 	drawTrack();
 	ship.draw();
 }

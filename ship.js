@@ -20,6 +20,7 @@ class Ship {
 		this.outerCircleRadius = outerCircleRadius;
 		this.currentQuad = this.getCurrentQuad();
 		this.previousQuad = this.currentQuad;
+		this.brain = new NeuralNetwork();
 	}
 	
 	left() {

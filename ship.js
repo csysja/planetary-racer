@@ -39,7 +39,7 @@ class Ship {
 		this.isAlive = true;
 
 		if (brain instanceof NeuralNetwork) {
-      this.brain = brain.copy();
+			this.brain = brain.copy();
 			this.brain.mutate(mutate(mutateMultiplier));
 		} else {
 			this.brain = new NeuralNetwork(5, 10, 2);

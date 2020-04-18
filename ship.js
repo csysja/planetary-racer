@@ -104,7 +104,7 @@ class Ship {
 		const angleToCenter = Math.atan2(y, -x);
 		const angleRelativeToX = angleToCenter >= 0 ? angleToCenter : 2 * Math.PI + angleToCenter;
 		const shipAngleCos = Math.cos(this.angle);
-		const shipAngleSin = Math.cos(this.angle);
+		const shipAngleSin = Math.sin(this.angle);
 		const shipAngleRelativeToXCos = Math.cos(angleRelativeToX);
 		const shipAngleRelativeToXSin = Math.sin(angleRelativeToX);
 		let inputs = [];
